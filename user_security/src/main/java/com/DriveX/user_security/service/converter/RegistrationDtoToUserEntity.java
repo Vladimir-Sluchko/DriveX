@@ -35,7 +35,7 @@ public class RegistrationDtoToUserEntity implements Converter<RegistrationDto, U
                 .setUsername(source.getNick())
                 .setMail(source.getMail())
                 .setPassword(encoder.encode(source.getPassword()))
-                .setStatus(Status.WAITING_ACTIVATION)
+                .setStatus(Status.ACTIVATED)
                 .setAuthorities(roles)
                 .setDtCreate(localDateTime)
                 .setDtUpdate(localDateTime)
