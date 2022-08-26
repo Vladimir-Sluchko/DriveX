@@ -2,7 +2,7 @@ package com.DriveX.expenses_service.model.entity;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
-
+//test
 @Entity
 @Table(name = "expenses", schema = "drivex_expenses")
 public class Expenses {
