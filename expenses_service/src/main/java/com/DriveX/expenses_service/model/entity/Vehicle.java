@@ -1,7 +1,12 @@
 package com.DriveX.expenses_service.model.entity;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import java.time.LocalDateTime;
-
+@Entity
+@Table(name = "vahicle",schema = "drivex_expenses")
 public class Vehicle {
     private String uuid;
     private String model;
@@ -18,46 +23,58 @@ public class Vehicle {
     public Vehicle() {
     }
 
+    @Id
+    @Column(name = "uuid")
     public String getUuid() {
         return uuid;
     }
 
+    @Column(name = "model")
     public String getModel() {
         return model;
     }
 
+    @Column(name = "brand")
     public String getBrand() {
         return brand;
     }
 
+    @Column(name = "type_fuel")
     public String getTypeFuel() {
         return typeFuel;
     }
 
+    @Column(name = "on_city_consumption")
     public String getOnCityConsumption() {
         return onCityConsumption;
     }
 
+    @Column(name = "off_city_consumption")
     public String getOffCityConsumption() {
         return offCityConsumption;
     }
 
+    @Column(name = "max_fuel_volume")
     public String getMaxFuelVolume() {
         return maxFuelVolume;
     }
 
+    @Column(name = "logo_url")
     public String getLogoURL() {
         return logoURL;
     }
 
+    @Column(name = "current_mileage")
     public String getCurrentMileage() {
         return currentMileage;
     }
 
+    @Column(name = "dt_creat")
     public LocalDateTime getDtCreate() {
         return dtCreate;
     }
 
+    @Column(name = "dt_update")
     public LocalDateTime getDtUpdate() {
         return dtUpdate;
     }
