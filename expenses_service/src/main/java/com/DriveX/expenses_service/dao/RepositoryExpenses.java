@@ -1,10 +1,13 @@
 package com.DriveX.expenses_service.dao;
 
-import com.DriveX.expenses_service.model.entity.Expenses;
+
+import com.DriveX.expenses_service.model.entity.Notification;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
+import java.util.UUID;
+
 @Repository
-public interface RepositoryExpenses extends JpaRepository<Long,Expenses> {
+public interface RepositoryExpenses extends JpaRepository<Notification, UUID> {
 
 }

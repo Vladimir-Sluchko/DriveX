@@ -1,0 +1,20 @@
+spring:
+  jpa:
+    database: POSTGRESQL
+    show-sql: true
+    sql-format: true
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+  datasource:
+    username: postgres
+    password: postgres
+    url: jdbc:postgresql://localhost:5433/drivex?currentSchema=drivex_expenses
+    driver-class-name: org.postgresql.Driver
+server:
+  port: 80
+url:
+  urlClassifierCountry: http://classifier-service:81/api/v1/classifier/country/check/
+  urlClassifierCategory: http://classifier-service:81/api/v1/classifier/concert/check/
